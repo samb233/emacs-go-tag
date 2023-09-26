@@ -225,8 +225,8 @@ It can either be displayed in its own buffer, in the echo area, or not at all."
         (patchbuf (get-buffer-create "*Go-Tag patch*"))
         (errbuf (if go-tag-show-errors
                     (get-buffer-create "*Go-Tag Errors*")))
-        (coding-system-for-read 'utf-8)
-        (coding-system-for-write 'utf-8))
+        (coding-system-for-read 'utf-8-unix)
+        (coding-system-for-write 'utf-8-unix))
 
     (unwind-protect
         (save-restriction
